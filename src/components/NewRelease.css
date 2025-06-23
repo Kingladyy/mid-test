@@ -1,0 +1,89 @@
+.new-release-section {
+  padding: 20px 40px;
+}
+
+.new-release-section .section-title {
+  color: white;
+  font-size: 1.7rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 15px; 
+  margin-left: 60px;
+  margin-top: 10px;
+}
+
+
+.movies-list::-webkit-scrollbar {
+  display: none;
+}
+
+
+.movies-list {
+  -ms-overflow-style: none; 
+  scrollbar-width: none;  
+  display: flex;
+  gap: 20px;
+  margin-left: 60px;
+  width: 190px;
+}
+
+.movie-card {
+  width: 190px;
+  flex-shrink: 0;
+}
+
+.movie-card .image-container {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.movie-card .image-container:hover {
+  transform: scale(1.05);
+}
+
+.movie-card .image-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    pointer-events: none;
+}
+
+.movie-card img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+.movie-card .episode {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: bold;
+  z-index: 1;
+  transition: opacity 0.3s ease;
+  
+}
+
+.movie-card .movieName {
+  color: white;
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 500;
+  white-space: normal;
+  text-align: center;
+} 
